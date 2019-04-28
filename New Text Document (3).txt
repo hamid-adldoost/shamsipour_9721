@@ -1,0 +1,27 @@
+select * from person;
+select * from student;
+
+select p.id as N'‘‰«”Â', p.first_name as N'‰«„', p.last_name, s.student_number, s.edu_level 
+from person p left join student s
+on p.id = s.person_id;
+
+select * from person, student
+ where person.id = student.person_id;
+
+ insert into major(title, description)
+ values('hesabdari', 'bbabababa');
+
+ insert into student(person_id, student_number, edu_level, major_id)
+ values(3, 96124, 1, null);
+
+ select * from major;
+
+ update student set major_id = 1;
+
+ select * from student left join major 
+ on student.major_id = major.id
+ 
+ union all
+
+ select * from student right join major
+ on student.major_id = major.id where major_id is null;
